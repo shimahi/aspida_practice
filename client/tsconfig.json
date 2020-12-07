@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "commonjs",
-    "lib": ["esnext"],
+    "target": "es2019",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "node",
     "allowJs": true,
+    "jsx": "preserve",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,7 +14,10 @@
       "@/*": ["src/*"]
     },
     "typeRoots": ["src/types", "node_modules/@types"],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
   },
   "include": ["src", "api"],
   "exclude": ["node_modules", "dist"]
